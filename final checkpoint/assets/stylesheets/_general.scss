@@ -1,0 +1,390 @@
+html {
+  font-size: 16px;
+  // overflow-y: scroll;
+}
+body {
+  font-family: "Archivo", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background: linear-gradient(#f8908a, #feb55e);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$heading: 1;
+@while $heading <= 6 {
+  h#{$heading} {
+    font-size: 3rem - ($heading * 0.35rem);
+    font-family: "Lobster", cursive;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  $heading: $heading + 1;
+}
+a {
+  text-decoration: none;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+// p {
+//   color: gray;
+// }
+/* CONTAINER */
+.container {
+  max-width: 65rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.padding {
+  padding: 4rem 0;
+}
+.text-center {
+  text-align: center;
+}
+.section-heading {
+  text-align: center;
+  color: $secondary;
+  padding: 1rem 0 3rem 0;
+  margin-bottom: 3rem;
+  h2 {
+    font-weight: 700;
+    padding-bottom: 1rem;
+  }
+  p {
+    color: gray;
+  }
+}
+
+#active {
+  background: $primary;
+  padding: 0.55rem;
+  color: $pure;
+  display: inline-block;
+}
+// BUTTON
+.btn {
+  display: inline-block;
+  &:hover {
+    background: linear-gradient(#ba5370, #f4e2d8);
+  }
+}
+.btn-primary {
+  border: none;
+  border-radius: 30px;
+  text-transform: capitalize;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b1e24;
+  cursor: pointer;
+  font-family: "Lobster", cursive;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  border: 2px solid linear-gradient(#f3665f, #f09a30);
+}
+.btn-secondry {
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  color: $primary;
+  margin-top: 1rem;
+}
+
+// HERO SECTIONS
+
+.other-hero {
+  height: 25vh;
+  background: $primary;
+  h1 {
+    font-weight: 900;
+    color: $pure;
+  }
+  p {
+    font-weight: 100;
+    color: $pure;
+  }
+}
+/* HEADER */
+.header-top {
+  background: $primary;
+  color: #fff;
+  padding: {
+    top: 1em;
+    bottom: 1em;
+  }
+  margin-bottom: 1em;
+  a {
+    color: #fff;
+    padding-left: 1em;
+  }
+}
+.icon-nav {
+  color: black;
+}
+.header {
+  background-color: $light;
+}
+.brand {
+  h2 {
+    font-size: 1.5rem;
+    color: $dark;
+    font-weight: 700;
+  }
+  span {
+    color: $primary;
+  }
+}
+.nav-menu {
+  padding: 0rem 0;
+  li {
+    margin-left: 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    a {
+      color: $heaven;
+      font-weight: 600;
+      padding: 0.55rem;
+      display: inline-block;
+      &:hover {
+        color: $secondary;
+        background: $primary;
+        color: $pure;
+      }
+    }
+  }
+}
+h4 {
+  line-height: 2.7;
+}
+#toggle,
+.bars {
+  display: none;
+}
+//   HERO SECTION
+
+.hero {
+  background: url("../media/menu.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin-bottom: 3rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.hero-content {
+  padding-top: 15%;
+  h1 {
+    color: $secondary;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+  }
+  p {
+    color: $secondary;
+    margin-bottom: 1rem;
+  }
+}
+.header-top a {
+  color: #fff;
+  padding-left: 1em;
+}
+a {
+  text-decoration: none;
+}
+// animation
+@keyframes zoomInOut {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+// ----ABOUT SECTION START---
+
+.About-indian-yum {
+  font-family: "Bree Serif", serif;
+  line-height: 1.5;
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    color: $heaven;
+  }
+}
+.about-img-container {
+  animation: zoom-in-zoom-out 30s ease-out infinite;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.About-indian-yum img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+// services
+
+.services-content {
+  text-align: center;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  h3 {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  p {
+    color: rgb(8, 7, 7);
+  }
+  i {
+    font-size: 50px;
+    color: $primary;
+  }
+}
+.services-content img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 7px;
+}
+.service-line {
+  font-family: "Lobster", cursive;
+  color: rgb(19, 16, 14);
+}
+
+/* FOOTER */
+
+.footer {
+  background: rgb(52, 58, 64);
+  padding: 3rem 0;
+  color: $text;
+}
+.footer-col {
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+  }
+  p,
+  a {
+    font-size: 1rem;
+    color: $text;
+  }
+  a {
+    line-height: 2.2;
+  }
+  a:hover {
+    color: red;
+  }
+  strong {
+    font-weight: 900;
+  }
+  i {
+    font-size: 1rem;
+    padding-right: 4px;
+    color: $text;
+    &:hover {
+      transform: scale(1.2);
+      color: red;
+    }
+  }
+  address {
+    padding: 0.3rem 0 1rem 0;
+  }
+}
+
+/* COPYRIGHT */
+.copyright {
+  padding-top: 3rem;
+}
+.copyright-text {
+  p,
+  small {
+    font-size: 0.9rem;
+    color: $text;
+  }
+  span {
+    color: $text;
+  }
+}
+.best {
+  background: $primary;
+  color: $pure;
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+  p {
+    color: $pure;
+  }
+  .btn {
+    color: $pure;
+    border-color: $pure;
+  }
+}
+// contact page
+.contact-info {
+  background: $textlight;
+
+  h5 {
+    padding: 1rem;
+  }
+}
+.icon-container {
+  background: $pure;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  i {
+    font-size: 2.5rem;
+    color: black;
+  }
+}
+form {
+  padding-left: 1rem;
+  input,
+  textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  textarea {
+    height: 14rem;
+  }
+  .btn {
+    width: 40%;
+    padding: 0.75rem 1rem;
+    align-self: center;
+  }
+}
